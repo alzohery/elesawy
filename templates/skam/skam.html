@@ -1,0 +1,394 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %} {% endblock %}
+{% block cotent%}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
+
+    body {
+        background-color: #F0F2F5;
+    }
+
+    .page-left-heading {
+        width: 100%
+    }
+
+    .page-right-form {
+        width: 100%;
+    }
+
+
+    .left-content img {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        width: 300px;
+    }
+
+    .left-content p {
+        margin-top: -10px;
+        font-size: 27px;
+        line-height: 35px;
+        font-weight: 600px;
+        width: 100%;
+        color: #1c1e21;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 30px;
+
+    }
+
+    .left-content {
+        margin-top: 50px;
+    }
+
+    .right-content {
+        background: #FFFFFF;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+        box-sizing: border-box;
+        width: 400px;
+        margin: auto;
+        padding: 15px;
+
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 14px 10px;
+        border-radius: 5px;
+        box-sizing: border-box;
+        border: 1px solid #DDDFE2;
+        font-size: 16px;
+        color: #9094A8;
+        outline: none;
+        transition: .4s;
+        background-color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 10px;
+
+    }
+
+    .input-text:focus {
+        border-color: #1877F2;
+        color: #000;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 8px 10px;
+        margin: 8px 0;
+        border-radius: 5px;
+        box-sizing: border-box;
+        border: 1px solid #1877F2;
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+        outline: none;
+        background: #1877F2;
+
+    }
+
+    .right-content a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 8px 0;
+        color: #1877F4;
+        transition: .5s;
+        font-size: 14px;
+    }
+
+    .right-content a:hover {
+        text-decoration: underline;
+    }
+
+    span {
+        background-color: #DDDFE2;
+        display: block;
+        width: 100%;
+        height: 1px;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    .btn button {
+        display: inline-block;
+        color: #fff;
+        background: #42B72A;
+        padding: 10px 15px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        outline: none;
+        cursor: pointer;
+        transition: .4s;
+    }
+
+    .btn button:hover {
+        background: #33c316;
+    }
+
+    .page-right-form .bottom-content {
+        text-align: center;
+        padding-top: 25px;
+        font-size: 14px;
+        margin: auto;
+    }
+
+    .page-right-form .bottom-content a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .page-right-form .bottom-content a:hover {
+        text-decoration: underline;
+    }
+
+    .trcont {
+        height: 100vh;
+        width: 100%;
+        padding-top: 130px;
+        padding: 130px 4% 50px 4%;
+      
+    }
+
+
+    @media only screen and (max-width: 900px)and (min-width: 767px) {
+        .left-content img {
+            width: 200px;
+            margin-left: -20px;
+        }
+        .left-content p {
+        margin-top: -10px;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 600px;
+        width: 100%;
+        color: #1c1e21;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 0px;
+
+    }
+        .right-content{
+            width: 300px;
+            margin: auto;
+            padding: 10px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .trcont {
+            height: 100vh;
+            width: 100%;
+            padding-top: 10px;
+            padding: 0px 4% 50px 4%;
+        }
+
+        .left-content {
+            margin-top: 10px;
+        }
+
+        .divimg {
+            display: flex;
+            justify-content: center;
+        }
+
+        .left-content img {
+            margin: auto;
+            width: 300px;
+        }
+
+        .left-content p {
+            width: 400px;
+            font-size: 25px;
+            margin-bottom: 40px;
+        }
+    }
+
+
+
+
+
+
+  
+
+
+
+
+    #pagefooter {
+        border-top: 0
+    }
+
+    #pageFooter {
+        color: #737373;
+        margin: 0 auto;
+        width: 980px
+    }
+
+    #pageFooter a {
+        text-decoration: none;
+        white-space: nowrap
+    }
+
+    #pageFooter a:last-child {
+        margin-right: 0
+    }
+
+    #pageFooter a:hover {
+        text-decoration: underline
+    }
+
+    #pageFooter .copyright {
+        font-size: 11px
+    }
+
+    #pageFooter .pageFooterLinkList {
+        line-height: 1.6;
+        margin-left: -20px
+    }
+
+    #contentCurve {
+        border-bottom: 1px solid #dddfe2;
+        font-size: 1px;
+        height: 8px;
+        margin-bottom: 8px
+    }
+
+    .hasLeftCol #contentCurve {
+        border: 1px solid #ccc;
+        border-top: none;
+        position: relative
+    }
+    .uiList li{
+        display: inline-block ;
+    }
+    .uiList li a{
+        color: #737373;
+        margin: 0px 8px;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .uiList{
+        margin-bottom: 0px !important;
+    }
+    .btn-plus{
+        width: 30px;
+        height: 20px;
+        background-color: #DDDFE2;
+        color: #555;
+        border: 0;
+        border-radius: 3px;
+        font-size: 15px;
+        font-weight: bold;
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    
+
+    }
+</style>
+<div class="container trcont">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="left-content">
+                <div class="divimg">
+                    <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="">
+                </div>
+                <p style="max-width: 500px;">Facebook helps you connect and share with the people in your life.</p>
+            </div>
+
+        </div>
+
+
+
+        <div class="col-md-6 ">
+            <!--  -->
+            <div class="page-right-form">
+                <div class="right-content">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <input class="input-text" name="name" type="text" placeholder="Email address or phone number">
+                        <input class="input-text" name="passwoard" type="password" placeholder="Password">
+                        <input type="submit" value="Log In" name="btn-sub">
+                        <a href="#">Forgotten password?</a>
+                        <span></span>
+                        <div class="btn" style="width: 100%;text-align:center"> <button>Create New Account</button></div>
+                    </form>
+
+                </div>
+                <p class="bottom-content"><b><a href="#">Create a Page</a></b> for a celebrity, band or business.</p>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div style="background-color: #FFFFFF;width: 100%;">
+    <div class="container" style="padding:30px 0px;">
+        
+        <div>
+            <ul class="uiList">
+                <li >English (UK)</li>
+                <li><a class="_sv4" dir="rtl" href="#" title="Arabic">العربية</a></li>
+                <li><a class="_sv4" dir="ltr" href="" title="French (France)">Français (France)</a></li>
+                <li><a class="_sv4" dir="ltr" href=""  title="Italian">Italiano</a></li>
+                <li><a class="_sv4" dir="ltr" href=""  title="German">Deutsch</a></li>
+                <li><a class="_sv4" dir="ltr" href=""  title="Russian">Русский</a></li>
+                <li><a class="_sv4" dir="ltr" href=""  title="Spanish">Español</a></li>
+                <li><a class="_sv4" dir="ltr" href=""  title="Indonesian">Bahasa Indonesia</a></li>
+                <li><a class="_sv4" dir="ltr" href=""  title="Turkish">Türkçe</a></li>
+                <li><a class="_sv4" dir="ltr" href=""  title="Portuguese (Brazil)">Português (Brasil)</a></li>
+                <li><a class="_sv4" dir="ltr" href=""  title="Hindi">हिन्दी</a></li>
+                <li><button class="btn-plus">+</button></li>
+                <div id="contentCurve"></div>
+            </ul>
+            
+            <div id="pageFooterChildren" role="contentinfo" aria-label="Facebook site links">
+                <ul class="uiList">
+                    <li><a href="" title="Sign up for Facebook">Sign Up</a></li>
+                    <li><a href="" title="Log in to Facebook">Log In</a></li>
+                    <li><a href="" title="Take a look at Messenger.">Messenger</a></li>
+                    <li><a href="" title="Facebook Lite for Android.">Facebook Lite</a></li>
+                    <li><a href="" title="Browse our Watch videos.">Watch</a></li>
+                    <li><a href="" title="Take a look at popular places on Facebook.">Places</a></li>
+                    <li><a href="" title="Check out Facebook games.">Games</a></li>
+                    <li><a href="" title="Buy and sell on Facebook Marketplace.">Marketplace</a></li>
+                    <li><a href="" title="Learn more about Facebook Pay" target="_blank">Facebook Pay</a></li>
+                    <li><a href="" title="Learn more about Oculus" target="_blank">Oculus</a></li>
+                    <li><a href="" title="Learn more about Facebook Portal" target="_blank">Portal</a></li>
+                    <li><a href="" title="Take a look at Instagram" >Instagram</a></li>
+                    <li><a href="" title="Take a look at Bulletin newsletter">Bulletin</a></li>
+                    <li><a href="" title="Browse our Local Lists directory.">Local</a></li>
+                    <li><a href="" title="Donate to worthy causes.">Fundraisers</a></li>
+                    <li><a href="" title="Browse our Facebook Services directory.">Services</a></li>
+                    <li><a href="" title="See the Voting Information Centre">Voting Information Centre</a></li>
+                    <li><a href="" title="Explore our groups.">Groups</a></li>
+                    <li><a href="" accesskey="8" title="Read our blog, discover the resource centre and find job opportunities.">About</a></li>
+                    <li><a href="" title="Advertise on Facebook">Create ad</a></li>
+                    <li><a href="" title="Create a Page">Create Page</a></li>
+                    <li><a href="" title="Develop on our platform.">Developers</a></li>
+                    <li><a href="" title="Make your next career move to our brilliant company.">Careers</a></li>
+                    <li><a href="" title="Learn about your privacy and Facebook.">Privacy</a></li>
+                    <li><a href="" title="Learn about cookies and Facebook." data-nocookies="1">Cookies</a></li>
+                    <li><a class="_41ug" href="" title="Learn about AdChoices.">AdChoices<i class="img sp_Awgqz7K4lHq sx_f315b2"></i></a></li>
+                    <li><a href="" accesskey="9" title="Review our terms and policies.">Terms</a></li>
+                    <li><a href="" accesskey="0" title="Visit our Help Centre.">Help</a></li>
+                    <li><a href="" title="Visit our contact uploading and non-users notice.">Contact uploading and non-users</a></li>
+
+                </ul>
+                
+            </div>
+        </div>
+        <div class="mvl copyright">
+            <div style="margin-left: 40px;font-size: 10px;margin-top: 10px;"><p> Meta © 2022</p></div>
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}
